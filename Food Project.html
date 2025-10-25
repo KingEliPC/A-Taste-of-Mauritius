@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A Taste of Mauritius</title>
 
-  <!-- Manifest for Android app-like behavior -->
+  <!-- Manifest for installable web app -->
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#D87A4A" />
 
@@ -38,22 +38,22 @@
   </style>
 </head>
 <body class="text-gray-800 antialiased">
-  <div class="container mx-auto px-4 py-8 md:py-12 min-h-screen flex flex-col items-center justify-center">
-    <header class="text-center mb-8 md:mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-[#D87A4A]">A Taste of Mauritius</h1>
-      <p class="mt-2 md:mt-4 text-lg text-gray-600 max-w-2xl">
-        Welcome to a culinary journey! Mauritius is a vibrant island where cultures from around the world mix, creating incredibly special food. This interactive guide introduces you to three of the most beloved and delicious Mauritian dishes. Click on a dish below to learn more about it!
+  <div class="container mx-auto px-6 py-12 min-h-screen flex flex-col items-center justify-center">
+    <header class="text-center mb-12">
+      <h1 class="text-5xl font-bold text-[#D87A4A]">A Taste of Mauritius</h1>
+      <p class="mt-4 text-xl text-gray-600 max-w-3xl">
+        Explore the vibrant flavors of Mauritius! Click a dish below to learn its story, ingredients, and a fun fact.
       </p>
     </header>
 
     <main class="w-full max-w-4xl">
-      <div id="dish-selector" class="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-5 mb-8">
-        <button data-dish="dhollpuri" class="dish-button w-full sm:w-auto text-lg font-semibold py-3 px-6 bg-white rounded-full shadow-md hover:bg-orange-100 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D87A4A]">Dholl Puri</button>
-        <button data-dish="biryani" class="dish-button w-full sm:w-auto text-lg font-semibold py-3 px-6 bg-white rounded-full shadow-md hover:bg-orange-100 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D87A4A]">Chicken Biryani</button>
-        <button data-dish="bolrenverse" class="dish-button w-full sm:w-auto text-lg font-semibold py-3 px-6 bg-white rounded-full shadow-md hover:bg-orange-100 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D87A4A]">Bol Renversé</button>
+      <div id="dish-selector" class="flex flex-wrap justify-center gap-4 mb-10">
+        <button data-dish="dhollpuri" class="dish-button text-lg font-semibold py-3 px-6 bg-white rounded-full shadow-md hover:bg-orange-100 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D87A4A]">Dholl Puri</button>
+        <button data-dish="biryani" class="dish-button text-lg font-semibold py-3 px-6 bg-white rounded-full shadow-md hover:bg-orange-100 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D87A4A]">Chicken Biryani</button>
+        <button data-dish="bolrenverse" class="dish-button text-lg font-semibold py-3 px-6 bg-white rounded-full shadow-md hover:bg-orange-100 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D87A4A]">Bol Renversé</button>
       </div>
 
-      <div id="dish-display" class="content-card bg-white p-6 md:p-10 rounded-2xl shadow-lg min-h-[350px] flex flex-col justify-center items-center text-center">
+      <div id="dish-display" class="content-card bg-white p-10 rounded-2xl shadow-lg min-h-[350px] flex flex-col justify-center items-center text-center">
         <div class="text-6xl mb-4" id="dish-icon">🍽️</div>
         <h2 class="text-3xl font-bold mb-3 text-[#3D2C24]" id="dish-title">Select a Dish</h2>
         <p class="text-gray-600 max-w-xl mb-6 leading-relaxed" id="dish-description">
@@ -65,8 +65,8 @@
       </div>
     </main>
 
-    <footer class="text-center mt-8 md:mt-12 text-gray-500">
-      <p>An interactive exploration of Mauritian cuisine.</p>
+    <footer class="text-center mt-12 text-gray-500">
+      <p>Made with ❤️ for Mauritian food lovers.</p>
     </footer>
   </div>
 
@@ -75,20 +75,20 @@
       dhollpuri: {
         title: "Dholl Puri",
         icon: "🟡",
-        description: "Dholl Puri began as a flatbread with yummy yellow split peas inside, in a country called India. Dholl Puri is the most famous street food in Mauritius! It is like a soft, thin pancake or a special Mauritian flatbread. It's made from a dough that has tiny yellow split peas inside, which makes it feel a little bit fluffy and taste really good. People love to eat Dholl Puri on the go, usually served with yummy curries and a tangy tomato sauce.",
+        description: "Dholl Puri is Mauritius' most famous street food! It's a soft flatbread filled with yellow split peas, served with curries and tomato chutney.",
         funFact: "People often eat two at a time, wrapped up and held in their hands!"
       },
       biryani: {
         title: "Mauritian Chicken Biryani",
         icon: "🍚",
-        description: "Biryani is a very special and fragrant rice dish. This version is made with chicken, which is layered with long grains of rice and lots of wonderful, colorful spices. Mauritian Chicken Biryani is like a big party in a pot, famous for its rich smell and often cooked for big family parties and celebrations.",
-        funFact: "The beautiful smell of the spices in Biryani is said to remind people of a celebration!"
+        description: "A fragrant rice dish layered with spiced chicken and herbs. It's a celebration food, cooked for big family gatherings.",
+        funFact: "The smell of biryani spices is said to bring back memories of celebrations!"
       },
       bolrenverse: {
-        title: "Bol Renversé (The Upside-Down Bowl)",
+        title: "Bol Renversé (Upside-Down Bowl)",
         icon: "🍲",
-        description: "This dish is a favorite because it's so much fun! It's a full meal made in layers and then flipped over onto a plate! A fried egg is placed at the bottom of the bowl, then a tasty stir-fry of vegetables and meat, and then rice. When flipped, the beautiful fried egg is right on top!",
-        funFact: "Because it is layered and then flipped, people also call this dish the 'Magic Bowl'!"
+        description: "A layered stir-fry with rice and a fried egg, flipped upside down onto the plate. It's fun, filling, and full of flavor!",
+        funFact: "It's also called the 'Magic Bowl' because of the flip!"
       }
     };
 
@@ -96,42 +96,4 @@
     const dishDisplay = document.getElementById('dish-display');
     const dishIcon = document.getElementById('dish-icon');
     const dishTitle = document.getElementById('dish-title');
-    const dishDescription = document.getElementById('dish-description');
-    const dishFunFactContainer = document.getElementById('dish-fun-fact-container');
-    const dishFunFact = document.getElementById('dish-fun-fact');
-    const buttons = document.querySelectorAll('.dish-button');
-
-    function updateDisplay(dishKey) {
-      const dish = dishes[dishKey];
-      dishDisplay.classList.add('card-enter');
-      setTimeout(() => {
-        dishIcon.textContent = dish.icon;
-        dishTitle.textContent = dish.title;
-        dishDescription.textContent = dish.description;
-        dishFunFact.textContent = dish.funFact;
-        dishFunFactContainer.style.display = 'block';
-        dishDisplay.classList.remove('card-enter');
-      }, 150);
-
-      buttons.forEach(button => {
-        if (button.dataset.dish === dishKey) {
-          button.classList.add('active-dish');
-        } else {
-          button.classList.remove('active-dish');
-        }
-      });
-    }
-
-    dishSelector.addEventListener('click', (e) => {
-      if (e.target.tagName === 'BUTTON') {
-        const dishKey = e.target.dataset.dish;
-        updateDisplay(dishKey);
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      buttons[0].click();
-    });
-  </script>
-</body>
-</html>
+    const dishDescription = document.getElementById('dish-description
